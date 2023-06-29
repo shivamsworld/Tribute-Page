@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tribute Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 40px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+
+        .highlight {
+            color: blue;
+        }
+
+        .effect {
+            animation: pulse 2s infinite;
+        }
+
+        .section {
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        #section1 {
+            background-color: #ffbc42;
+            color: #333;
+        }
+
+        #section2 {
+            background-color: #f94144;
+         
+        }
+
+        #section3 {
+            background-color: #43aa8b;
+            color: #fff;
+        }
+
+        .image-section {
+            background-image: url('bheem.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 700px;
+            
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.2);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="section1" class="section">
+        <div class="container">
+            <h1 class="effect">Meet  My Friend Chota bheem</h1>
+            <p>
+                Chhota Bheem is<span class="highlight"> an Indian animated series adventures about a boy named Bheem </span>and<span class="highlight"> his friends in fictional village of Dholakpur</span>. 
+           Bheem is a strong, brave and intelligent boy with all the possible good values. He loves his friends and protects them from all dangers. But this doesn’t mean he always approves their<span class="highlight"> actions </span> and <span class="highlight"> behaviour </span>. Bheem corrects his friends whenever they are wrong.
+            </p>
+        </div>
+    </div>
+
+    <div class="image-section">
+        <div class="container">
+           
+        </div>
+    </div>
+
+    <div id="section2" class="section">
+        <div class="container">
+            <p>
+      Bheem is a nine-year-old boy. <span class="highlight">Chutki, Raju, Jaggu are Bheem good friends. </span>Everyday is a new adventure for Bheem and his      friends. Whenever something wrong goes around in the nearby kingdoms, Bheem and his friends are there to help out. Bheem      loves laddoos, his dose of courage and strength to fight evil every time.
+            </p>
+        </div>
+    </div>
+
+    <div id="section3" class="section">
+        <div class="container">
+            <p>
+                  <h1>Hello Doston !  Mai hu Chota Bheem.....</h1>
+            </p>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const sections = document.getElementsByClassName("section");
+            for (let i = 0; i < sections.length; i++) {
+                const section = sections[i];
+                const colors = ["#ffbc42", "#f94144", "#43aa8b"];
+                section.style.backgroundColor = colors[i % colors.length];
+            }
+
+            const effectElement = document.querySelector(".effect");
+            effectElement.classList.add("highlight");
+        });
+    </script>
+</body>
+
+</html>
